@@ -1,3 +1,8 @@
+<!--5. Crie um algoritmo que solicite um número, faça o cálculo fatorial e exiba o resultado na tela. 
+Ex: Entrada = 3 
+Processamento: (3 * 2) * 1 
+Saída: 6 -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,6 +35,6 @@
         echo "<p>O fatorial de $numero é: $fatorial</p>";
     }
     ?>
-    
+
 </body>
 </html>
