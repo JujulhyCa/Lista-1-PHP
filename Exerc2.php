@@ -20,8 +20,8 @@ menor valor na sequência de entrada. -->
         <input type="number" name="valor6">
         <input type="number" name="valor7">
         <button type="submit" >Enviar</button>
-
-        <?php
+    <form>
+    <?php
             $valor = $_POST['valor1'];
             $menor = $valor;
             $aux = 1;
@@ -48,7 +48,5 @@ menor valor na sequência de entrada. -->
 
             echo "$menor é o menor valor, na posição $aux.";
         ?>
-    <form>
-
 </body>
 </html>
