@@ -28,6 +28,9 @@ quantidades de latas de tinta a serem compradas e o preço total.-->
 
         // Calcular a quantidade de latas de tinta necessárias (considerando latas de 18 litros)
         $latas_tinta = ceil($litros_tinta / 18);
+        /*Com a função "ceil()" envolvendo o cálculo da quantidade de latas de tinta, estamos garantindo que 
+        mesmo se o número de latas necessário for um decimal, ele será arredondado para cima para garantir 
+        que tenhamos pelo menos a quantidade necessária de tinta.*/
 
         // Calcular o preço total das latas de tinta
         $preco_total = $latas_tinta * 80;
