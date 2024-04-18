@@ -42,7 +42,7 @@ de acesso) para que a pessoa leia sobre este assunto -->
         }
 
         // Link para referência sobre IMC
-        echo "<p>Para mais informações sobre o Índice de Massa Corporal, consulte este <a href='https://www.bbc.com/portuguese/geral-46311722#:~:text=A%20f%C3%B3rmula%20do%20IMC%20divide,24%2C9%20t%C3%AAm%20peso%20normal.' target='_blank'>
+        echo "<p>Para mais informações sobre o Índice de Massa Corporal, acesse:<a href='https://www.bbc.com/portuguese/geral-46311722#:~:text=A%20f%C3%B3rmula%20do%20IMC%20divide,24%2C9%20t%C3%AAm%20peso%20normal.' target='_blank'>
             IMC: Qual é seu Índice de Massa Corporal e o que isso significa para sua saúde?</a>.</p>";
     }
     ?>
