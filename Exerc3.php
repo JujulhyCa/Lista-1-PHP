@@ -10,18 +10,34 @@ iguais, retorne o triplo da soma.-->
 </head>
 <body>
     <h2>Calculadora de Soma</h2>
-    <?php
-    // Defina os valores de entrada
-    $valor1 = 5;
-    $valor2 = 5;
+        <form method="post">
+            <label>Informe o primeiro valor:</label>
+            <input type="number" name="valor1"><br>
+            <label>Informe o segundo valor:</label>
+            <input type="number" name="valor2"><br>
+            <button type="submit">Calcular</button>
+        </form>
+        <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Obter os valores de entrada do formulário
+        $valor1 = $_POST["valor1"];
+        $valor2 = $_POST["valor2"];
 
-    // Calcule a soma dos valores de entrada
-    $soma = $valor1 + $valor2;
+        // Calcular a soma dos valores de entrada
+        $soma = $valor1 + $valor2;
 
-    // Verifique se os valores são iguais e retorne o resultado correspondente
-    $resultado = ($valor1 == $valor2) ? $soma * 3 : $soma;
+       // Verifique se os valores são iguais
+        if ($valor1 == $valor2) {
+            // Se forem iguais, retorne o triplo da soma
+            $resultado = $soma * 3;
+        } else {
+            // Se não forem iguais, retorne apenas a soma
+            $resultado = $soma;
+        }
+
+        // Exibir o resultado
+        echo "<p>O resultado é: $resultado</p>";
+    }
     ?>
-    
-    <p>O resultado é: <?php echo $resultado; ?></p>
 </body>
 </html>
