@@ -2,51 +2,40 @@
 menor valor na sequência de entrada. -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar o Menor Valor</title>
 </head>
-
 <body>
+    <h2>Encontrar o Menor Valor</h2>
     <form action="" method="post">
-        <label>Informe 7 números diferentes:</label>
-        <input type="number" name="valor1">
-        <input type="number" name="valor2">
-        <input type="number" name="valor3">
-        <input type="number" name="valor4">
-        <input type="number" name="valor5">
-        <input type="number" name="valor6">
-        <input type="number" name="valor7">
-        <button type="submit" >Enviar</button>
-    <form>
+        <label>Informe 7 números diferentes:</label><br>
+        <?php for ($i = 1; $i <= 7; $i++): ?>
+            <input type="number" name="valor<?php echo $i; ?>"><br>
+        <?php endfor; ?>
+        <button type="submit">Enviar</button>
+    </form>
+    
     <?php
-            $valor = $_POST['valor1'];
-            $menor = $valor;
-            $aux = 1;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $valores = array();
 
-            if($menor <= $valor2){
-                $menor = $valor2;
-                $aux = 2;
-            } elseif($menor <= $valor3){ 
-                $valor = $valor3;
-                $aux = 3;      
-            } elseif($menor <= $valor4){
-                $valor = $valor4;
-                $aux = 4;
-            } elseif($menor <= $valor5){
-                $valor = $valor5;
-                $aux = 5;
-            } elseif($menor <= $valor6){
-                $valor = $valor6;
-                $aux = 6;
-            } else{
-                $valor = $valor7;
-                $aux = 7;
+        for ($i = 1; $i <= 7; $i++) {
+            if (isset($_POST["valor$i"])) {
+                $valores[] = $_POST["valor$i"];
             }
+        }
 
-            echo "$menor é o menor valor, na posição $aux.";
-        ?>
+        if (!empty($valores)) {
+            $menor = min($valores);
+            $posicao = array_search($menor, $valores) + 1;
+            echo "O menor valor é $menor, na posição $posicao.";
+        } else {
+            echo "Por favor, preencha todos os campos.";
+        }
+    }
+    ?>
 </body>
 </html>
