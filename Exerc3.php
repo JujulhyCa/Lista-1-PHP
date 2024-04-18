@@ -19,9 +19,9 @@ iguais, retorne o triplo da soma.-->
         </form>
         <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obter os valores de entrada do formulário
-        $valor1 = $_POST["valor1"];
-        $valor2 = $_POST["valor2"];
+        // Obter os valores de entrada do formulário e convertê-los para números inteiros
+        $valor1 = intval($_POST["valor1"]);
+        $valor2 = intval($_POST["valor2"]);
 
         // Calcular a soma dos valores de entrada
         $soma = $valor1 + $valor2;
