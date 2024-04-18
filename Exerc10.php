@@ -12,7 +12,7 @@ de acesso) para que a pessoa leia sobre este assunto -->
 </head>
 <body>
     <h2>Calculadora de IMC</h2>
-    <form method="post" action="">
+    <form action="" method="post">
         Peso (kg): <input type="number" step="0.01" name="peso" required><br><br>
         Altura (m): <input type="number" step="0.01" name="altura" required><br><br>
         <input type="submit" value="Calcular">
