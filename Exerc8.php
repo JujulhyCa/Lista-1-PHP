@@ -36,7 +36,7 @@ quantidades de latas de tinta a serem compradas e o preço total.-->
         $preco_total = $latas_tinta * 80;
 
         // Exibir o resultado
-        echo "<p>Para pintar uma área de $area metros quadrados, você precisará de $latas_tinta lata(s) de tinta.</p>";
+        echo "<p>Para pintar uma área de $area metro(s) quadrado(s), você precisará de $latas_tinta lata(s) de tinta.</p>";
         echo "<p>O preço total a ser pago será de R$ $preco_total.</p>";
     }
     ?>
