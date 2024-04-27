@@ -13,7 +13,7 @@ c. quantos anos essa pessoa terá em 2025-->
 
     <h2>Calculadora de Idade</h2>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form method="post" action="">
     Ano de Nascimento: <input type="number" name="ano_nascimento" required>
     <input type="submit">
     </form>
